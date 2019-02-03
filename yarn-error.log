@@ -1,0 +1,32 @@
+Arguments: 
+  /Users/yqxia/.nvm/versions/node/v8.1.4/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js build
+
+PATH: 
+  /Users/yqxia/.pyenv/shims:/Users/yqxia/.pyenv/bin:/Users/yqxia/.jenv/shims:/Users/yqxia/.jenv/bin:/Users/yqxia/google-cloud-sdk/google-cloud-sdk/bin:/Users/yqxia/.sdkman/candidates/gradle/current/bin:/Users/yqxia/.rvm/gems/ruby-2.3.4/bin:/Users/yqxia/.rvm/gems/ruby-2.3.4@global/bin:/Users/yqxia/.rvm/rubies/ruby-2.3.4/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home/bin:/Users/yqxia/.nvm/versions/node/v8.1.4/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Applications/Postgres.app/Contents/Versions/9.6/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin::/usr/local/apache-tomcat-8.5.20/bin:/Users/yqxia/apache-maven-3.5.0/bin:/Applications/Postgres.app/Contents/Versions/9.6/bin:/Users/yqxia/.rvm/bin:/Users/yqxia/.rvm/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.1.4
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Couldn't find a package.json file in "/Users/yqxia/project/exxon/wsClient"
+      at new MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
+      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:40048:15
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:98:30)
+      at /usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:109:13
+      at <anonymous>

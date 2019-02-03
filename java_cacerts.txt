@@ -1,0 +1,5 @@
+keytool error: java.lang.Exception: Keystore file does not exist: /path/to/cacerts
+java.lang.Exception: Keystore file does not exist: /path/to/cacerts
+	at sun.security.tools.keytool.Main.doCommands(Main.java:768)
+	at sun.security.tools.keytool.Main.run(Main.java:366)
+	at sun.security.tools.keytool.Main.main(Main.java:359)
