@@ -24,7 +24,7 @@ public class HelloWSS {
                 .setSSLContext(context)
                 .setVerifyHostname(false)
                 .setSocketFactory(SocketFactory.getDefault())
-                .setVerifyHostname(false)m
+                .setVerifyHostname(false)
                 .createSocket(endpoint)
                 .addListener(new WebSocketAdapter() {
                     @Override
