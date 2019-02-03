@@ -13,8 +13,8 @@ public class HelloWSS {
 //        String user = System.getenv("USER");
 //        String password = System.getenv("PASSWORD");
         String endpoint = "wss://sap752sp01.southeastasia.cloudapp.azure.com:44300/sap(cz1TSUQlM2FBTk9OJTNhdmhjYWxucGxjaV9OUExfMDAlM2FfSkRDd3A3ZjhwSFh6SElPQVhjZ1ZJNWp4ak5lcXoyNlVUX25SMDh2LUFUVA==)/bc/apc/sap/ping";
-        String user = "TESTID01";
-        String password = "Sh0wM3TheLust";
+        String user = "XINYI";
+        String password = "xiexinyi1206";
 
         // Create a custom SSL context.
         SSLContext context = NaiveSSLContext.getInstance("TLS");
@@ -24,7 +24,7 @@ public class HelloWSS {
                 .setSSLContext(context)
                 .setVerifyHostname(false)
                 .setSocketFactory(SocketFactory.getDefault())
-                .setVerifyHostname(false)
+                .setVerifyHostname(false)m
                 .createSocket(endpoint)
                 .addListener(new WebSocketAdapter() {
                     @Override
