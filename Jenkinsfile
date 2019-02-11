@@ -4,18 +4,11 @@ pipeline{
         timeout(time: 20, unit: 'MINUTES')
     }
     stages{
-        stage('Deploy to Openshift'){
-            agent none
+        stage('Test')
             steps{
-                script{
-                    node('gradle'){
-                        stage('Test'){
-                            sh 'gradle test -i'
-                        }
-                    }
-                }
+                sh 'gradle test -i'
             }
-        }
+
         stage('Build'){
             steps{
                 sh 'gradle build -i'
