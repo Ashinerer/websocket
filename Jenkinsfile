@@ -25,7 +25,7 @@ pipeline{
         stage('Build Image'){
 
             steps{
-                sh 'oc process -f sample.yaml'
+                sh 'oc create -f sample.yaml'
 
             }
         }
