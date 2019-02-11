@@ -11,12 +11,12 @@ pipeline{
         }
         stage('Build'){
             steps{
-                sh 'gradle build -i'
+                sh './gradlew build -i'
             }
         }
         stage('Jar'){
             steps{
-                sh 'gradle shadowJar'
+                sh './gradlew shadowJar'
                 stash name:'wsClient-1.0', includes:"build/libs/wsClient-1.0.jar"
             }
         }
