@@ -5,7 +5,7 @@ pipeline{
     }
     stages{
         stage('Test'){
-            agent{'gradle'}
+            agent{label 'gradle'}
             steps{
                 sh 'gradle test -i'
             }
