@@ -4,11 +4,11 @@ pipeline{
         timeout(time: 20, unit: 'MINUTES')
     }
     stages{
-        stage('Test')
-            steps{
-                sh 'gradle test -i'
+        stage('Test') {
+            steps {
+                sh './gradlew test -i'
             }
-
+        }
         stage('Build'){
             steps{
                 sh 'gradle build -i'
