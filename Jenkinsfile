@@ -1,23 +1,20 @@
 pipeline{
-    agent none
+    agent any
     options {
         timeout(time: 20, unit: 'MINUTES')
     }
     stages{
         stage('Test'){
-            agent{label 'gradle'}
             steps{
                 sh 'gradle test -i'
             }
         }
         stage('Build'){
-            agent{label 'gradle'}
             steps{
                 sh 'gradle build -i'
             }
         }
         stage('Jar'){
-            agent{label 'gradle'}
             steps{
                 sh 'gradle shadowJar'
                 stash name:'wsClient-1.0', includes:"build/libs/wsClient-1.0.jar"
