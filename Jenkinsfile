@@ -9,22 +9,24 @@ pipeline{
                 sh './gradlew test -i'
             }
         }
-        stage('Build'){
-            steps{
-                sh './gradlew build -i'
-            }
-        }
         stage('Jar'){
             steps{
                 sh './gradlew shadowJar'
                 stash name:'wsClient-1.0', includes:"build/libs/wsClient-1.0.jar"
             }
         }
-        stage('Build Image'){
-            agent{dockerfile true}
+        stage('Build'){
             steps{
-                sh 'docker build -t demo:v1 .'
-                sh 'docker run demo:v1'
+                sh './gradlew build -i'
+//                sh "tar cvf webskt.tar Dockerfile build/libs/wsClient-1.0.jar"
+//                stash name: "package", includes: "webskt.tar"
+            }
+        }
+        stage('Build Image'){
+
+            steps{
+                sh 'oc process -f sample.yaml'
+
             }
         }
     }

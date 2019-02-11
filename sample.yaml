@@ -7,5 +7,10 @@ spec:
     git:
       uri: "https://github.com/Ashinerer/websocket"
   strategy:
-    jenkinsPipelineStrategy:
-      jenkinsfilePath: "/Jenkinsfile"
+    type: "Docker"
+    dockerStrategy:
+      dockerfilePath:
+  output:
+    to:
+      kind: "DockerImage"
+      name: ":websocket:latest"
