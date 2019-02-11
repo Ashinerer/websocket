@@ -4,9 +4,8 @@ metadata:
   name: "sample-pipeline"
 spec:
   source:
-    type:"Git"
     git:
-      url: "https://github.com/Ashinerer/websocket.git"
+      uri: "https://github.com/Ashinerer/websocket"
   strategy:
     jenkinsPipelineStrategy:
-      jenkinsfilePath: "Jenkinsfile"
+      jenkinsfilePath: "/Jenkinsfile"
