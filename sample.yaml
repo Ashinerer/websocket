@@ -11,7 +11,7 @@ spec:
     sourceStrategy:
       from:
         kind: "ImageStreamTag"
-        name: "java:latest"
+        name: "openjdk:8"
   output:
     to:
       kind: "ImageStreamTag"
