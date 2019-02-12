@@ -1,9 +1,9 @@
-pipeline{
+pipeline {
     agent any
     options {
         timeout(time: 20, unit: 'MINUTES')
     }
-//    stages{
+    stages {
 //        stage('Test') {
 //            steps {
 //                sh './gradlew test -i'
@@ -16,8 +16,8 @@ pipeline{
 //                stash name: "package", includes: "webskt.tar"
 //            }
 //        }
-        stage('Jar'){
-            steps{
+        stage('Jar') {
+            steps {
                 sh './gradlew build -i'
                 sh './gradlew shadowJar'
                 sh 'ls ./build'
@@ -40,3 +40,4 @@ pipeline{
 //            }
 //        }
     }
+}
