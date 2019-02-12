@@ -11,7 +11,7 @@ spec:
     sourceStrategy:
       from:
         kind: "ImageStreamTag"
-        name: "demo:v1"
+        name: "java:latest"
   output:
     to:
       kind: "ImageStreamTag"
