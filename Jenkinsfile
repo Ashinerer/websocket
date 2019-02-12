@@ -13,6 +13,8 @@ pipeline{
             steps{
                 sh './gradlew shadowJar'
                 stash name:'wsClient-1.0', includes:"build/libs/wsClient-1.0.jar"
+                sh 'cat Dockerfile | oc new-build --name websocket-build --dockerfile=\'-\''
+                sh 'oc start-build websocket-build'
             }
         }
         stage('Build'){
@@ -26,6 +28,7 @@ pipeline{
 
             steps{
                 sh 'oc create -f sample.yaml'
+
 
             }
         }
