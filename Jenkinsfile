@@ -9,8 +9,16 @@ pipeline{
                 sh './gradlew test -i'
             }
         }
+//        stage('Build'){
+//            steps{
+//                sh './gradlew build -i'
+////                sh "tar cvf webskt.tar Dockerfile build/libs/wsClient-1.0.jar"
+////                stash name: "package", includes: "webskt.tar"
+//            }
+//        }
         stage('Jar'){
             steps{
+                sh './gradlew build -i'
                 sh './gradlew shadowJar'
                 sh "tar cvf sample.tar Dockerfile build/libs/wsClient-1.0.jar"
 //                stash name:'wsClient-1.0', includes:"build/libs/wsClient-1.0.jar"
@@ -20,13 +28,7 @@ pipeline{
 //                sh 'oc start-build websocket-build'
             }
         }
-        stage('Build'){
-            steps{
-                sh './gradlew build -i'
-//                sh "tar cvf webskt.tar Dockerfile build/libs/wsClient-1.0.jar"
-//                stash name: "package", includes: "webskt.tar"
-            }
-        }
+
         stage('Build Image'){
 
             steps{
