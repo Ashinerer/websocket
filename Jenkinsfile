@@ -29,7 +29,7 @@ pipeline{
                 sh 'oc start-build websocket-build2'
             }
         }
-      
+
 
 //        stage('Build Image'){
 //
@@ -40,4 +40,3 @@ pipeline{
 //            }
 //        }
     }
-}
