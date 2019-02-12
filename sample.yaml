@@ -15,4 +15,4 @@ spec:
   output:
     to:
       kind: "ImageStreamTag"
-      name: "webskt:latest"
+      name: "build1:latest"
