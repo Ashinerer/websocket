@@ -23,9 +23,9 @@ pipeline {
                 sh 'ls ./build'
 //                sh "tar cvf sample.tar Dockerfile build/libs/wsClient-1.0.jar"
 //                stash name:'wsClient-1.0', includes:"build/libs/wsClient-1.0.jar"
-//                sh "oc create -f sample.yaml"
-//                sh "oc start-build sample --from-archive=sample.tar --follow"
-                sh 'cat Dockerfile | oc new-build --name websocket-build3 --dockerfile=\'-\''
+                sh "oc apply -f sample.yaml"
+                sh "oc start-build sample"
+//                sh 'cat Dockerfile | oc new-build --name websocket-build3 --dockerfile=\'-\''
                 //sh 'oc start-build websocket-build2'
             }
         }
